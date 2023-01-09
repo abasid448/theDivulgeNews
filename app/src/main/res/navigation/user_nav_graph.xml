@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/user_nav_graph"
+    app:startDestination="@id/userSelectionFragment">
+
+    <fragment
+        android:id="@+id/userSelectionFragment"
+        android:name="com.example.divulgenewsapp.ui.fragments.UserSelectionFragment"
+        android:label="UserSelectionFragment">
+        <action
+            android:id="@+id/action_userSelectionFragment_to_registerMobileNumberFragment"
+            app:destination="@id/registerMobileNumberFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerMobileNumberFragment"
+        android:name="com.example.divulgenewsapp.ui.fragments.RegisterMobileNumberFragment"
+        android:label="RegisterMobileNumberFragment">
+        <action
+            android:id="@+id/action_registerMobileNumberFragment_to_verifyOtpFragment"
+            app:destination="@id/verifyOtpFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/verifyOtpFragment"
+        android:name="com.example.divulgenewsapp.ui.fragments.VerifyOtpFragment"
+        android:label="VerifyOtpFragment">
+        <action
+            android:id="@+id/action_verifyOtpFragment_to_selectCountryFragment"
+            app:destination="@id/selectCountryFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_verifyOtpFragment_to_registerMobileNumberFragment"
+            app:destination="@id/registerMobileNumberFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectCountryFragment"
+        android:name="com.example.divulgenewsapp.ui.fragments.SelectCountryFragment"
+        android:label="SelectCountryFragment" />
+</navigation>

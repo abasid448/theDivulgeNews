@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_margin="16dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="We've sent OTP to your phone number"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvPhoneNumber"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="+919562520502"
+            android:textAlignment="center"
+            android:textColor="@color/text_grey"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvOtpTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textSize="14sp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text=""
+            android:textColor="@color/black" />
+
+        <com.chaos.view.PinView
+            android:id="@+id/otpView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
+            android:focusedByDefault="true"
+            android:layout_margin="16dp"
+            android:itemBackground="@drawable/bg_rounded_corner"
+            app:itemCount="6"
+            android:inputType="number"
+            android:focusable="true"
+            android:background="@color/white"
+            android:textSize="16sp"
+            app:viewType="rectangle"
+            android:fontFamily="@font/montserrat_medium"
+            android:textStyle="bold"
+            app:itemHeight="50dp"
+            app:itemRadius="20dp"
+            app:itemWidth="50dp"
+            app:lineColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/text_grey"
+                android:text="Did'nt get the OTP?" />
+
+            <TextView
+                android:id="@+id/tvResendOtp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textSize="14sp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Resend OTP"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_margin="16dp"
+            android:layout_height="wrap_content">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/btnVerifyOtp"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/bg_rounded_corner"
+                android:fontFamily="@font/montserrat_medium"
+                android:letterSpacing="0"
+                android:text="Verify OTP"
+                android:textAllCaps="false"
+                app:backgroundTint="@color/app_red" />
+
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvChangePhoneNumber"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/montserrat"
+            android:text="@string/change_phone_number"
+            android:textAlignment="center"
+            android:textColor="@color/text_grey"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</LinearLayout>
