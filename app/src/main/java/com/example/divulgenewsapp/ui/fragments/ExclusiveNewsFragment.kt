@@ -88,9 +88,12 @@ class ExclusiveNewsFragment : Fragment(R.layout.fragment_exclusive_news) {
                         viewModel.getExclusiveNews()
                         viewModel.exclusiveNewsFromFireStore.observe(viewLifecycleOwner, Observer { exclusiveNews ->
                             exclusiveNewsAdapter.differ.submitList(exclusiveNews)
+                            binding.llNoSearchResult.visibility = View.GONE
                         })
                     } else {
                         startActivity(Intent(activity, NewsSubscriptionActivity::class.java))
+                        binding.llNoSearchResult.visibility = View.VISIBLE
+
                     }
                 }
             }

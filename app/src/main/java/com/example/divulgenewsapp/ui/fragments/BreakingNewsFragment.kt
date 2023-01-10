@@ -1,6 +1,7 @@
 package com.example.divulgenewsapp.ui.fragments
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -22,6 +23,7 @@ import com.example.divulgenewsapp.ui.ProfileAndSettingsActivity
 import com.example.divulgenewsapp.ui.viewmodel.NewsViewModel
 import com.example.divulgenewsapp.util.Constants
 import com.example.divulgenewsapp.util.Constants.Companion.QUERY_PAGE_SIZE
+import com.example.divulgenewsapp.util.Constants.Companion.aboutusURL
 import com.example.divulgenewsapp.util.Resource
 
 class BreakingNewsFragment : Fragment(R.layout.fragment_breaking_news) {
@@ -42,6 +44,14 @@ class BreakingNewsFragment : Fragment(R.layout.fragment_breaking_news) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel = (activity as NewsActivity).viewModel
+
+        //contact us
+
+        binding.tvaboutus.setOnClickListener {
+            val intent =  Intent(Intent.ACTION_VIEW)
+            intent.setData(Uri.parse(aboutusURL))
+            startActivity(intent)
+        }
 
         // Logout button click.
         binding.btnLogout.setOnClickListener {

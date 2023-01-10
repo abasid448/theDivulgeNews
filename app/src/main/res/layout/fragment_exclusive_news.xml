@@ -47,7 +47,7 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:text="@string/no_saved_news"
+                android:text="@string/no_Exclusive_news"
                 android:textSize="18sp"
                 android:textColor="@color/text_grey"
                 android:fontFamily="@font/montserrat_medium"

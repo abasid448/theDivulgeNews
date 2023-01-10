@@ -14,6 +14,7 @@
 
     <!-- Saved news fragment-->
     <string name="no_saved_news">No saved news</string>
+    <string name="no_Exclusive_news">Get Premium to Sow more</string>
 
     <!-- Search news fragment-->
     <string name="search_dot">Search…</string>

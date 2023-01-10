@@ -24,6 +24,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <TextView
+            android:id="@+id/tvaboutus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:text="about us"
+            android:textStyle="bold"
+            android:textColor="@color/app_dark_red"
+            app:layout_constraintBottom_toBottomOf="@+id/btnLogout"
+            app:layout_constraintEnd_toStartOf="@+id/btnLogout"
+            app:layout_constraintTop_toTopOf="@+id/btnLogout" />
+
         <ImageButton
             android:id="@+id/btnLogout"
             android:layout_width="30dp"
